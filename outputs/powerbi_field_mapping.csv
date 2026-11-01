@@ -1,0 +1,4 @@
+dashboard_page,suggested_visuals,source_files
+Overview,KPI cards and industry/location/role charts,kpi_summary.csv; kpi_by_industry.csv; kpi_by_location.csv
+Salary and Skills,Salary KPIs and skill frequency,kpi_summary.csv; cleaned_dataset.csv
+Recruitment Trends,Monthly postings and forecast,monthly_job_postings.csv; forecast_results.csv

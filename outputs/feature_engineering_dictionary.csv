@@ -1,0 +1,9 @@
+engineered_feature,source_column,method_and_purpose
+posting_year/month/quarter/year_month,postdate,Time grouping for descriptive trends and forecasting
+exp_min/exp_max/exp_mid/exp_category,experience,Parsed range or single value; midpoint is an approximation
+city_list/primary_city/location_count,joblocation_address,Aliases standardized; first listed city treated as primary
+title_clean/role_family,jobtitle,Heuristic title cleanup and keyword role classification
+pay_min_annual/pay_max_annual/pay_mid_annual,payrate,Strict explicit annual/monthly pay formats; monthly multiplied by 12
+skill_* flags and skill counts,jobdescription,"Fixed-vocabulary keyword mentions, not verified requirements"
+ug_requirement/pg_listed/doctorate_listed,education,Parsed education fields; source formatting may vary
+desc_length,jobdescription,Character count after boilerplate and URL removal

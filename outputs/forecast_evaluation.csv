@@ -1,0 +1,2 @@
+model,MAE,RMSE,test_months
+Linear trend,852.6,1084.87,3

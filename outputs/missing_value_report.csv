@@ -1,0 +1,15 @@
+column,missing,missing_pct,unique
+site_name,18013,81.88,1
+numberofpositions,17536,79.71,84
+education,1996,9.07,2355
+skills,528,2.4,45
+joblocation_address,501,2.28,2329
+payrate,97,0.44,1848
+postdate,23,0.1,4203
+company,4,0.02,8469
+industry,5,0.02,63
+experience,4,0.02,147
+jobdescription,4,0.02,21063
+jobid,0,0.0,21910
+jobtitle,0,0.0,17564
+uniq_id,0,0.0,22000

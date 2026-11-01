@@ -1,0 +1,19 @@
+type,area,statement,evidence
+Observation,Industry,Listings are dominated by IT-Software / Software Services,"9,216 of 21,995 listings (41.9%); top 3 industries hold 53.6%"
+Observation,Location,"Recruitment activity is concentrated in a few cities, led by Bengaluru","7,936 listings have it as first city (36.9%); top 3 first cities hold 66.3%; Bengaluru appears in 9,051 listings overall"
+Observation,Roles,Software Development is the largest identifiable role family,"5,035 listings (22.9% of titled listings); 27.3% fall in Other; titles are fragmented (13,581 cleaned titles)"
+Observation,Skills,"Most mentioned technical skills: SQL, Java, JavaScript, HTML, Oracle","SQL 10.6%; Java 10.2%; JavaScript 8.4%; HTML 8.2%; Oracle 6.6% of listings (keyword mentions, not confirmed requirements)"
+Observation,Skills,Most mentioned general skill: Communication,31.8% of listings
+Observation,Experience,The most common minimum-experience band is 3-5 yrs minimum,35.0% of listings with parsed experience; median required experience midpoint 4.5 years
+Observation,Education,The most common first UG option is Any Graduate,59.2% of listings with education text
+Observation,Salary,Salary non-disclosure is the norm,21.1% give a comparable numeric pay; 72.0% say 'Not disclosed'
+Observation,Pay vs experience,"Among listings that disclose pay, advertised pay increases with required experience","Spearman rho = 0.749, n = 4,648, p < 1e-300"
+Possible explanation (untested),Industry / location,"The strong IT-Software and Bengaluru presence may reflect the portal's user base or how the sample was drawn, not the wider labour market",No test in this project separates sampling effects from real demand
+Possible explanation (untested),Pay vs experience,Employers who disclose pay may differ systematically from those who do not,Only listings with numeric pay enter the correlation
+Recommendation,Job seekers,"Build and evidence SQL, Java, JavaScript alongside communication skills, then confirm against current live postings",Based on keyword frequencies above (10.6% top technical skill)
+Recommendation,Job seekers,"Investigate IT-Software / Software Services and Bengaluru, Mumbai first for volume, but also look at less crowded industries",Based on industry share 41.9% and city counts
+Recommendation,Job seekers,The most common requirement is 3-5 yrs minimum (35.0%); entry-level (0 yrs minimum) listings are only 11.9%,Based on parsed minimum experience
+Recommendation,Educational institutions,"Include hands-on work in SQL, Java, JavaScript, HTML in curricula and projects",Based on the most frequently mentioned technical skills; validate with employer input
+Recommendation,Educational institutions,"Most listings accept 'Any Graduate' (59.2%), so emphasise demonstrable skills over degree label alone",Based on first listed UG option
+Recommendation,Recruiters and employers,Disclosing a pay range can differentiate a listing,72.0% of listings do not disclose pay
+Recommendation,Recruiters and employers,"Consider the competition in Bengaluru, where first-city listings are most concentrated, and standardise job titles for searchability","36.9% of first cities; 13,581 cleaned title variants"

@@ -1,0 +1,4 @@
+test,n,statistic,p_value,effect_size,decision
+Spearman experience vs pay,4648,0.7493,0.0,rho=0.749 (large/strong),reject H0
+Mann-Whitney Software Development vs Sales / Business Development,1384,317279.5,3.188031957300593e-26,r=0.329 (moderate),reject H0
+Chi-square industry vs city,15068,2526.8,0.0,V=0.153 (small/weak),reject H0

@@ -1,0 +1,13 @@
+month,model,actual_postings,predicted_postings
+2016-11,Naive,841.0,2318.0
+2016-12,Naive,1788.0,841.0
+2017-01,Naive,174.0,1788.0
+2016-11,Moving Average (3),841.0,1087.0
+2016-12,Moving Average (3),1788.0,1071.0
+2017-01,Moving Average (3),174.0,1649.0
+2016-11,Linear Trend,841.0,1752.3034254573768
+2016-12,Linear Trend,1788.0,1580.3402252738772
+2017-01,Linear Trend,174.0,1641.1205955334988
+2016-11,Simple Exponential Smoothing,841.0,1339.957110877183
+2016-12,Simple Exponential Smoothing,1788.0,1190.269977614028
+2017-01,Simple Exponential Smoothing,174.0,1369.5889843298196

@@ -1,0 +1,62 @@
+{
+  "project_title": "Job Market Analysis: Understanding Employment Trends and Recruitment Patterns Using Naukri.com Job Listings",
+  "problem_statement": "Describe patterns in historical job listings, including industry, role, location, skills, experience requirements and advertised pay.",
+  "objectives": [
+    "Profile the supplied job-listing sample and its data quality.",
+    "Identify listing patterns by industry, role, location, experience and extracted skill mentions.",
+    "Summarize comparable advertised salary information and its missingness.",
+    "Test selected associations and group differences using suitable statistical methods.",
+    "Create business KPIs, exploratory monthly trends and an explicitly limited three-month forecast.",
+    "Communicate findings through reproducible outputs and a three-page Power BI dashboard."
+  ],
+  "scope": "Historical job advertisements in the supplied Naukri.com sample. It does not represent all vacancies, applicants, employers or the current labour market.",
+  "stakeholders": [
+    "Job seekers",
+    "Recruiters and employers",
+    "Educational institutions",
+    "Workforce planners"
+  ],
+  "success_criteria": [
+    "All input fields and transformations are documented.",
+    "Cleaning and validation reports are exported.",
+    "EDA, statistical results and KPIs are reproducible from the supplied CSV.",
+    "Forecasting uses chronological validation and reports MAE/RMSE.",
+    "Dashboard tables and charts can be traced to exported CSV outputs.",
+    "Limitations, bias, fairness and privacy safeguards are documented."
+  ],
+  "data_source": "Naukri.com job-listings dataset supplied for academic coursework; exact collection provenance must be verified.",
+  "collection_method": "Not independently verified by this script. Replace this description with the actual provenance/collection method of the supplied dataset; do not claim scraping if it was not performed.",
+  "coverage": "The script computes the actual row count and posting-date coverage from the input file. The known working sample in prior analysis was approximately 22,000 listings dated 2015-2017, but verify against this run.",
+  "variables": [
+    "jobid",
+    "company",
+    "education",
+    "experience",
+    "industry",
+    "jobdescription",
+    "joblocation_address",
+    "jobtitle",
+    "numberofpositions",
+    "payrate",
+    "postdate",
+    "skills",
+    "site_name"
+  ],
+  "key_limitations": [
+    "One job portal and historical sample; sampling and representation bias.",
+    "Uneven month coverage; absent months are treated as unknown, not zero.",
+    "Salary currency is not documented; values are kept as source numeric units without currency labels.",
+    "Salary statistics use only strict comparable numeric salary strings.",
+    "Skill extraction is a fixed-vocabulary keyword scan of job descriptions.",
+    "Role families and primary city are heuristic classifications.",
+    "Number of positions is missing for many listings and is not equivalent to job-post count.",
+    "Forecast is exploratory and describes sample listing counts, not current hiring demand."
+  ],
+  "ethics_and_fairness": [
+    "Use only for the stated academic purpose and restrict access to raw data.",
+    "Do not attempt to identify individuals or infer protected characteristics.",
+    "Do not use these aggregate historical patterns to rank applicants or automate hiring decisions.",
+    "Check representation and missingness before comparing groups.",
+    "Keep human review and transparent documentation for any downstream recruitment use."
+  ]
+}

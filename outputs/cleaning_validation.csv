@@ -1,0 +1,5 @@
+check,passed
+experience min <= max,True
+salary min <= max,True
+postdate parsed,True
+no remaining exact content duplicates,True

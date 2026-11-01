@@ -1,0 +1,4 @@
+check,count
+exact duplicate rows,0
+duplicate rows ignoring uniq_id,0
+excess rows from repeated jobid,90

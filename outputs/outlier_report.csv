@@ -1,0 +1,5 @@
+column,n,q1,median,q3,lower_fence,upper_fence,outliers,outlier_pct,skewness
+pay_mid_annual,4648,250000.0,375000.0,725000.0,-462500.0,1437500.0,380,8.18,2.85
+numberofpositions,4464,2.0,4.0,10.0,-10.0,22.0,681,15.26,5.69
+exp_mid (years),21884,3.0,4.5,7.0,-3.0,13.0,738,3.37,1.37
+desc_length (characters),21996,1120.0,1574.5,2367.0,-750.5,4237.5,1162,5.28,3.37
