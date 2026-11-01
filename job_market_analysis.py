@@ -104,9 +104,8 @@ PAY_SINGLE_PATTERN = re.compile(rf"{PREFIX}{AMOUNT}\s*{UNIT}\s*(?:{ANNUAL_TOKEN}
 
 
 def banner(title):
-    print("\n" + "=" * 100)
+    print("\n" + "-" * 100)
     print(title)
-    print("=" * 100)
 
 
 def sub_banner(title):
@@ -142,18 +141,16 @@ def text_bars(counts, width=40, top=10):
     if counts.empty:
         print("  (no data available)")
         return
-    peak = counts.max()
     label_width = min(max(len(str(label)) for label in counts.index), 48)
     for label, value in counts.items():
-        print(f"{str(label)[:48]:<{label_width}} | {'#' * max(1, int(width * value / peak))} {value:,}")
+        print(f"{str(label)[:48]:<{label_width}} | {value:,}")
 
 
 def share_bars(shares, top=15):
     shares = shares.head(top)
     for name, share in shares.items():
-        print(f"{name:<18} | {'#' * int(share * 100 / 2)} {share:.1%}")
-
-
+        print(f"{name:<18} | {share:.1%}")
+        
 def effect_label(value, thresholds=(0.1, 0.3, 0.5)):
     magnitude = abs(value)
     if magnitude < thresholds[0]:
@@ -501,23 +498,10 @@ def parsing_report(df):
 
 
 def validation_samples(df):
-    banner("MANUAL VALIDATION SAMPLES (raw value next to extracted value)")
+    banner("MANUAL VALIDATION SAMPLES ")
     sample = lambda frame, n: frame.sample(min(n, len(frame)), random_state=RANDOM_SEED)
     sub_banner("Experience")
     print(sample(df[df["experience"].notna()], 6)[["experience", "exp_min", "exp_max", "exp_format"]].to_string(index=False))
-    sub_banner("Salary (up to 2 rows per category)")
-    groups = [g.sample(min(2, len(g)), random_state=RANDOM_SEED) for _, g in df[df["payrate"].notna()].groupby("pay_category")]
-    if groups:
-        paid = pd.concat(groups)
-        paid = paid.assign(payrate=paid["payrate"].str[:55])
-        print(paid[["payrate", "pay_category", "pay_min_annual", "pay_max_annual"]].to_string(index=False))
-    else:
-        print("  (no salary text available)")
-    sub_banner("Location")
-    multi = df[df["location_count"] > 1]
-    shown = pd.concat([sample(df[df["location_count"] == 1], 3), sample(multi, 3)])
-    shown = shown.assign(joblocation_address=shown["joblocation_address"].str[:55])
-    print(shown[["joblocation_address", "cities_listed", "location_count", "primary_city"]].to_string(index=False))
     sub_banner("Education")
     shown = sample(df[df["education"].notna()], 5)
     shown = shown.assign(education=shown["education"].str[:70])
@@ -649,8 +633,7 @@ def eda_time(df):
     if monthly.empty:
         print("  (no valid posting dates)")
         return
-    for month, value in monthly.items():
-        print(f"{month} | {'#' * int(40 * value / monthly.max())} {value:,}")
+    print(monthly.rename_axis("month").to_frame("job_listings").to_string())
     span = (df["postdate"].max().to_period("M") - df["postdate"].min().to_period("M")).n + 1
     sparse = int((monthly < 0.01 * monthly.sum()).sum())
     print(f"Months with data: {len(monthly)} of {span} in the date span | months holding < 1% of dated listings: {sparse}")
